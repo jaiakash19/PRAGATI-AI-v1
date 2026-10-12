@@ -1,0 +1,1 @@
+UPDATE app_profiles SET role = 'Admin' WHERE lower(email) = 'jaiakash1910@gmail.com';

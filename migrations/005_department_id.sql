@@ -1,0 +1,2 @@
+ALTER TABLE app_profiles ADD COLUMN IF NOT EXISTS department_id TEXT;
+CREATE UNIQUE INDEX IF NOT EXISTS app_profiles_department_id_key ON app_profiles (upper(department_id)) WHERE department_id IS NOT NULL;

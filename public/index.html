@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102744">
+<title>PRAGATI-AI | IPMPRS</title>
+<link rel="stylesheet" href="/theme.css">
+<style>
+:root{--navy:#102744;--navy2:#183957;--blue:#2463a6;--blue2:#eaf2fb;--gold:#d69b32;--ink:#172435;--muted:#68778a;--line:#e1e7ee;--bg:#f4f6f9;--white:#fff;--green:#167a58;--green-bg:#e7f6ef;--amber:#a36309;--amber-bg:#fff4dd;--red:#b42332;--red-bg:#fdebed;--purple:#6e55a4;--shadow:0 8px 28px rgba(18,39,65,.07)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}.shell{min-height:100vh;display:flex}.sidebar{width:250px;background:var(--navy);color:#dce8f5;display:flex;flex-direction:column;flex-shrink:0;padding:22px 15px;position:fixed;inset:0 auto 0 0;z-index:20}.brand{display:flex;gap:11px;align-items:center;padding:3px 10px 25px;border-bottom:1px solid rgba(255,255,255,.13)}.brand-mark{width:40px;height:40px;border-radius:10px;background:linear-gradient(145deg,#f2c568,#c48220);display:grid;place-items:center;color:#172b43;font-weight:900;font-size:17px;box-shadow:0 4px 16px #0003}.brand-name{font-size:18px;letter-spacing:.04em;font-weight:850;color:white}.brand-sub{font-size:10px;color:#9db4cc;letter-spacing:.16em;text-transform:uppercase}.side-label{font-size:10px;text-transform:uppercase;color:#86a0ba;letter-spacing:.15em;padding:24px 12px 8px}.nav{display:grid;gap:4px}.nav-btn{display:flex;align-items:center;gap:12px;padding:11px 12px;border:0;border-radius:8px;background:transparent;color:#c7d8e9;text-align:left;font-weight:600;font-size:13px;transition:.15s}.nav-btn svg{width:18px;height:18px;opacity:.9}.nav-btn:hover{background:#ffffff10;color:white}.nav-btn.active{background:#ffffff19;color:white;box-shadow:inset 3px 0 0 #e3ad48}.side-bottom{margin-top:auto}.security-note{background:#ffffff0d;border:1px solid #ffffff17;border-radius:10px;padding:12px;font-size:11px;color:#adbfce}.security-note strong{display:block;color:#e4c17a;font-size:12px;margin-bottom:4px}.main-wrap{width:calc(100% - 250px);margin-left:250px;min-width:0}.topbar{height:76px;background:white;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 32px;gap:16px;position:sticky;top:0;z-index:12}.breadcrumb{font-size:11px;color:var(--muted)}.top-title{font-weight:800;font-size:17px;margin-top:1px}.top-right{display:flex;align-items:center;gap:16px}.prototype-pill{font-size:10px;background:#fff5df;color:#956010;border:1px solid #f3d99c;border-radius:20px;padding:5px 9px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.avatar{height:36px;width:36px;border-radius:50%;background:var(--blue2);color:var(--navy);display:grid;place-items:center;font-weight:850}.profile{display:flex;align-items:center;gap:9px}.profile-name{font-size:12px;font-weight:750;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.profile-role{font-size:10px;color:var(--muted)}.content{max-width:1600px;margin:0 auto;padding:28px 32px 48px}.page-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:24px}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:var(--blue);font-weight:850}.page-title{font-size:26px;line-height:1.25;letter-spacing:-.03em;margin:4px 0 6px;font-weight:850;color:#14263d}.page-subtitle{color:var(--muted);font-size:13px;max-width:680px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:7px;padding:10px 14px;font-weight:750;font-size:12px;transition:.15s;white-space:nowrap}.btn svg{width:15px;height:15px}.btn-primary{background:var(--navy);color:white}.btn-primary:hover{background:#20456a}.btn-blue{background:var(--blue);color:white}.btn-blue:hover{background:#1d5189}.btn-light{background:white;border-color:var(--line);color:#304258}.btn-light:hover{border-color:#9db1c9;background:#f9fbfd}.btn-danger{background:var(--red-bg);color:var(--red);border-color:#f2c4c9}.btn-sm{padding:6px 9px;font-size:11px}.btn-gold{background:#efbf5a;color:#1b2a3d}.grid{display:grid;gap:16px}.metric-grid{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:20px}.metric{background:white;border:1px solid var(--line);border-radius:11px;padding:19px 19px 16px;box-shadow:0 3px 12px #132f4c05;min-width:0}.metric-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:11px;font-weight:700}.metric-icon{height:36px;width:36px;border-radius:9px;display:grid;place-items:center;background:var(--blue2);color:var(--blue)}.metric-icon svg{width:18px;height:18px}.metric-value{font-size:30px;font-weight:850;letter-spacing:-.04em;line-height:1.25;margin-top:12px}.metric-foot{font-size:11px;color:var(--muted);margin-top:5px}.metric-foot strong{color:var(--green)}.two-col{grid-template-columns:minmax(0,1.65fr) minmax(280px,1fr);align-items:start}.panel{background:white;border:1px solid var(--line);border-radius:11px;box-shadow:0 3px 12px #132f4c05;min-width:0;overflow:hidden}.panel-head{padding:17px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}.panel-title{font-weight:820;font-size:14px}.panel-note{font-size:11px;color:var(--muted);margin-top:2px}.panel-body{padding:18px 20px}.text-link{background:transparent;border:0;color:var(--blue);font-size:11px;font-weight:800}.status{display:inline-flex;align-items:center;gap:6px;border-radius:6px;padding:4px 8px;font-size:10px;font-weight:800;white-space:nowrap;background:#edf1f5;color:#4b5b6c}.status:before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor}.status.submitted{background:#eaf2ff;color:#295a9a}.status.under-review{background:#fff4dd;color:#956010}.status.recommended{background:#f0eafb;color:#6e55a4}.status.approved{background:#e7f6ef;color:#167a58}.status.implementing{background:#e0f4f4;color:#087b83}.status.closed{background:#edf1f5;color:#536173}.status.returned{background:#fdebed;color:#b42332}.status.draft{background:#f1f3f6;color:#657384}.priority{font-size:10px;font-weight:850}.priority.Critical{color:#b42332}.priority.High{color:#c27418}.priority.Medium{color:#52708e}.priority.Low{color:#7a8793}.table-wrap{width:100%;overflow:auto}table{width:100%;border-collapse:collapse;min-width:700px}th{text-align:left;color:#738197;text-transform:uppercase;letter-spacing:.09em;font-size:9px;font-weight:850;background:#fafbfd;padding:12px 18px;white-space:nowrap}td{padding:14px 18px;border-top:1px solid #edf0f4;vertical-align:middle;font-size:12px}tbody tr:hover{background:#fbfcfe}.proposal-title{font-weight:780;font-size:12px;color:#1e324a;max-width:330px}.proposal-meta{font-size:10px;color:var(--muted);margin-top:4px}.demo-tag{font-size:9px;text-transform:uppercase;letter-spacing:.07em;background:#fff4dd;color:#956010;border-radius:4px;padding:2px 5px;font-weight:850;margin-left:6px}.priority-dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:6px}.timeline{display:grid;gap:15px}.timeline-item{display:grid;grid-template-columns:31px minmax(0,1fr);gap:10px;position:relative}.timeline-item:not(:last-child):before{content:"";position:absolute;left:15px;top:32px;bottom:-15px;width:1px;background:#e1e7ee}.timeline-mark{width:31px;height:31px;border-radius:9px;background:#edf4fc;color:var(--blue);display:grid;place-items:center;z-index:1}.timeline-mark svg{width:15px;height:15px}.timeline-title{font-size:11px;font-weight:800}.timeline-desc{font-size:11px;color:var(--muted);margin-top:3px}.timeline-time{font-size:10px;color:#8a98a9;margin-top:4px}.progress-list{display:grid;gap:14px}.progress-line{display:flex;align-items:center;justify-content:space-between;font-size:11px;margin-bottom:6px}.progress-line strong{font-weight:800}.bar{height:7px;background:#eaf0f5;border-radius:12px;overflow:hidden}.bar span{height:100%;display:block;border-radius:12px;background:var(--blue)}.bar.green span{background:#24a276}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}.field{display:grid;gap:6px;min-width:0}.field label{font-size:11px;font-weight:800;color:#45586e}.input,.select,.textarea{width:100%;min-width:0;border:1px solid #d5dee8;border-radius:7px;padding:10px 11px;color:#1a2d43;background:white;outline:none;font-size:12px}.input:focus,.select:focus,.textarea:focus{border-color:#6b9ccf;box-shadow:0 0 0 3px #dceafa}.textarea{resize:vertical;min-height:92px}.searchbox{position:relative;min-width:230px;flex:1;max-width:440px}.searchbox svg{position:absolute;width:16px;height:16px;left:12px;top:11px;color:#8696a7}.searchbox input{padding-left:36px}.select{min-width:145px}.empty{padding:42px 20px;text-align:center;color:var(--muted)}.empty-icon{width:48px;height:48px;border-radius:14px;background:#edf4fc;color:var(--blue);margin:0 auto 12px;display:grid;place-items:center}.empty-icon svg{width:23px;height:23px}.empty h3{margin:0 0 5px;font-size:14px;color:#31465c}.empty p{font-size:12px;margin:0 auto 14px;max-width:390px}.notice{display:flex;gap:11px;padding:12px 14px;border-radius:8px;font-size:11px;margin-bottom:15px}.notice.info{background:#edf5ff;border:1px solid #d8e8fa;color:#355779}.notice.warning{background:#fff6e6;border:1px solid #f3dfb2;color:#805512}.notice svg{width:17px;height:17px;flex-shrink:0}.modal-backdrop{position:fixed;inset:0;background:#12253ccc;backdrop-filter:blur(3px);z-index:60;display:grid;place-items:center;padding:18px;overflow-y:auto}.modal{background:white;width:min(740px,100%);max-height:calc(100vh - 36px);overflow:auto;border-radius:13px;box-shadow:0 24px 100px #07182a60}.modal.wide{width:min(980px,100%)}.modal-head{padding:21px 24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:flex-start;gap:15px}.modal-head h2{font-size:19px;line-height:1.3;margin:5px 0 3px;letter-spacing:-.02em}.modal-head p{margin:0;color:var(--muted);font-size:11px}.close-btn{border:1px solid var(--line);background:white;border-radius:7px;width:34px;height:34px;display:grid;place-items:center;color:#637186;flex-shrink:0}.close-btn svg{width:17px;height:17px}.modal-body{padding:22px 24px}.modal-foot{display:flex;justify-content:flex-end;gap:9px;padding:16px 24px;border-top:1px solid var(--line);background:#fafbfd}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.span2{grid-column:1/-1}.form-help{font-size:10px;color:var(--muted);margin-top:3px}.detail-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(230px,1fr);gap:22px}.detail-section{margin-bottom:22px}.section-label{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#728195;font-weight:850;margin-bottom:9px}.detail-text{white-space:pre-wrap;font-size:12px;line-height:1.75;color:#42566c}.detail-kv{display:grid;grid-template-columns:1fr 1fr;gap:12px}.kv{padding:11px;border-radius:7px;background:#f6f8fb}.kv span{display:block;font-size:10px;color:var(--muted);margin-bottom:4px}.kv strong{font-size:12px}.small-timeline{display:grid;gap:10px}.small-event{border-left:2px solid #bfd3e8;padding:2px 0 3px 11px}.small-event strong{font-size:11px}.small-event p{margin:3px 0 0;font-size:10px;color:var(--muted)}.toast-wrap{position:fixed;top:91px;right:23px;z-index:100;display:grid;gap:8px;width:min(370px,calc(100vw - 30px))}.toast{padding:13px 15px;background:#112c48;color:white;border-radius:9px;box-shadow:0 10px 30px #1027443b;font-size:12px;animation:toastin .18s ease}.toast.error{background:#942532}.toast strong{display:block;margin-bottom:2px}.loading{padding:60px 20px;display:grid;justify-items:center;color:var(--muted);gap:12px}.spinner{width:28px;height:28px;border:3px solid #d9e4ef;border-top-color:var(--blue);border-radius:50%;animation:spin .75s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@keyframes toastin{from{transform:translateY(-5px);opacity:0}to{transform:translateY(0);opacity:1}}.role-pill{display:inline-flex;border-radius:5px;background:#eaf2fb;color:#285887;font-size:10px;padding:4px 7px;font-weight:800}.role-table select{max-width:210px}.menu-toggle{display:none}.footer-note{font-size:10px;color:#8793a1;padding:20px 0 0;text-align:center}.mobile-overlay{display:none}
+@media(max-width:1150px){.metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.two-col{grid-template-columns:1fr}.content{padding:24px}.topbar{padding:0 24px}.main-wrap{width:calc(100% - 230px);margin-left:230px}.sidebar{width:230px}.detail-grid{grid-template-columns:1fr 260px}}
+@media(max-width:820px){.sidebar{transform:translateX(-100%);transition:transform .2s;width:260px}.sidebar.open{transform:translateX(0)}.mobile-overlay.show{display:block;position:fixed;inset:0;background:#06172b80;z-index:19}.main-wrap{width:100%;margin:0}.topbar{height:66px;padding:0 17px}.content{padding:21px 16px 36px}.menu-toggle{display:grid;border:1px solid var(--line);background:white;color:var(--navy);width:35px;height:35px;border-radius:7px;place-items:center}.top-left{display:flex;align-items:center;gap:10px}.prototype-pill{display:none}.profile-name{max-width:110px}.page-title{font-size:23px}.page-head{align-items:flex-start}.detail-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.metric-grid{grid-template-columns:1fr 1fr;gap:9px}.metric{padding:13px}.metric-value{font-size:25px}.metric-icon{height:31px;width:31px}.page-head{display:block}.page-head>.btn{margin-top:14px;width:100%}.topbar{gap:8px}.profile-role{display:none}.content{padding:17px 12px 30px}.panel-head,.panel-body{padding:14px}.form-grid{grid-template-columns:1fr}.span2{grid-column:auto}.modal-backdrop{padding:8px}.modal{max-height:calc(100vh - 16px)}.modal-head,.modal-body{padding:17px}.modal-foot{padding:13px 17px;flex-wrap:wrap}.toolbar>*{width:100%;max-width:none}.searchbox{min-width:0}.toolbar .btn{width:100%}.detail-kv{grid-template-columns:1fr 1fr}.top-title{font-size:15px}.breadcrumb{display:none}.top-left{gap:7px}}
+</style>
+<style>
+/* PRAGATI-AI IPMPRS navy-and-crimson workspace theme. */
+:root{--navy:#0f2347;--navy2:#132d58;--blue:#2463a6;--blue2:#eaf2fb;--gold:#e5b64f;--red:#d9232e;--bg:#0d1f3d;--ink:#172435;--muted:#68778a;--line:#dfe6ef;--shadow:0 10px 28px rgba(2,11,27,.13)}
+body{background:#202328;color:#f7f9fc}
+.shell{width:calc(100% - 64px);max-width:1600px;margin:0 auto;background:var(--navy);box-shadow:0 18px 65px #0005;min-height:100vh}
+.sidebar{background:linear-gradient(180deg,#0b1b37,#10264b);border-right:1px solid #ffffff12}
+.brand{padding-top:5px}
+.brand-mark{border-radius:50%;width:44px;height:44px;flex:0 0 44px;display:grid;place-items:center;background:linear-gradient(145deg,#e7c66d,#b98a2e);border:1px solid #f3df9c;color:#102744;font-weight:900;font-size:17px;box-shadow:0 5px 18px #0003}
+.nav-btn.active{background:#d9232e;color:#fff;box-shadow:inset 3px 0 0 #f4c35d}
+.nav-btn:hover{background:#ffffff13}
+.security-note{border-color:#ffffff23;background:#ffffff08}
+.side-label{color:#90a6c7}
+.emergency-bar{height:44px;padding:0 28px;background:#d9232e;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:15px;position:sticky;top:0;z-index:32;border-radius:0 0 0 0;font-size:12px;letter-spacing:.015em}
+.emergency-primary,.emergency-links{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.emergency-primary strong{font-size:11px;letter-spacing:.055em}
+.emergency-bar a{color:#fff;text-decoration:none;font-weight:850}
+.emergency-bar a:hover{text-decoration:underline}
+.emergency-links{gap:22px;font-size:11px;font-weight:650}
+.emergency-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px #ffffff25}
+.portal-banner{min-height:146px;padding:26px 32px;display:flex;align-items:center;gap:18px;background-color:#102346;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px),linear-gradient(110deg,#102346,#10284e);background-size:44px 44px,44px 44px,auto;border-bottom:1px solid #ffffff1b}
+.portal-crest{width:68px;height:68px;flex:0 0 68px;border-radius:50%;display:grid;place-items:center;color:#fff;background:#ffffff10;border:1px solid #ffffff3a}
+.portal-crest svg{width:43px;height:43px}
+.portal-identity{min-width:0}
+.portal-eyebrow{font-weight:800;font-size:11px;letter-spacing:.12em;color:#b8c6dd}
+.portal-identity h1{font-size:25px;letter-spacing:-.035em;margin:4px 0 3px;line-height:1.2;color:#fff}
+.portal-identity h1 span{font-size:11px;vertical-align:middle;letter-spacing:.09em;margin-left:8px;border:1px solid #ffffff3a;border-radius:5px;padding:4px 7px;color:#f0ca78}
+.portal-identity p{font-size:12px;color:#b2c2db;margin:0;line-height:1.5}
+.portal-status{margin-left:auto;min-width:150px;text-align:right;color:#dbe7f6;font-size:10px;font-weight:850;letter-spacing:.09em}
+.portal-status .pulse{display:inline-block;width:7px;height:7px;margin-right:7px;border-radius:50%;background:#34c37b;box-shadow:0 0 0 4px #34c37b1f}
+.portal-status small{display:block;color:#9eafca;font-size:9px;line-height:1.4;letter-spacing:0;margin-top:8px;font-weight:500}
+.main-wrap{background-color:#0f2347;background-image:linear-gradient(#ffffff04 1px,transparent 1px),linear-gradient(90deg,#ffffff04 1px,transparent 1px);background-size:44px 44px}
+.topbar{height:65px;top:44px;background:#11264a;border-bottom:1px solid #ffffff20;color:#fff}
+.breadcrumb{color:#9eafca}
+.top-title{color:#fff}
+.prototype-pill{background:#ffffff10;color:#f2d58f;border-color:#ffffff2b;border-radius:5px}
+.avatar{background:#263f67;color:#fff;border:1px solid #5d749c}
+.content{background:transparent}
+.page-title{color:#fff}
+.page-subtitle{color:#b7c6dc}
+.eyebrow{color:#efc15d}
+.metric,.panel{box-shadow:0 8px 24px rgba(1,10,25,.16);border-color:#dce3ec;border-radius:9px}
+.metric{background:#fff}
+.panel{background:#fff}
+.panel-head{background:#fff}
+.btn-primary{background:#d9232e}
+.btn-primary:hover{background:#b91c27}
+.btn-blue{background:#1c4b82}
+.btn-gold{background:#e9bb57;color:#152847}
+.text-link{color:#245e9c}
+.status.approved{background:#e7f6ef}
+.emergency-bar + .portal-banner{margin:0}
+.footer-note{color:#aabbd4}
+.notice.info{background:#edf5ff;color:#355779}
+.modal-backdrop{background:#061329cc}
+@media(max-width:820px){
+ .shell{width:100%;margin:0}
+ .portal-banner{padding:22px 20px;min-height:125px;gap:12px}
+ .portal-crest{width:52px;height:52px;flex-basis:52px}
+ .portal-crest svg{width:34px;height:34px}
+ .portal-identity h1{font-size:20px}
+ .portal-eyebrow{font-size:9px;letter-spacing:.07em}
+ .portal-status{display:none}
+ .emergency-bar{padding:0 16px}
+ .emergency-primary strong{font-size:10px}
+ .emergency-links{gap:10px}
+}
+@media(max-width:560px){
+ .emergency-bar{height:auto;min-height:46px;align-items:flex-start;flex-direction:column;justify-content:center;gap:2px;padding:6px 13px}
+ .emergency-primary,.emergency-links{gap:7px}
+ .emergency-links{font-size:10px;padding-left:16px}
+ .topbar{top:58px}
+ .portal-banner{padding:18px 14px;min-height:112px}
+ .portal-crest{display:none}
+ .portal-identity h1{font-size:19px}
+ .portal-identity h1 span{font-size:9px;margin-left:3px}
+ .portal-identity p{font-size:10px}
+}
+.top-signout{display:inline-flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0}.top-signout [data-icon]{width:16px;height:16px;display:inline-flex}
+@media(max-width:560px){.topbar{padding-right:10px}.top-right{gap:7px}.top-right .prototype-pill{display:none}.top-right .profile{gap:5px}.top-right .profile-name{max-width:76px;overflow:hidden;text-overflow:ellipsis}.top-signout{padding:8px 9px;font-size:11px}.signout-label{display:inline}}
+/* Improve contrast: readable text on white cards and light form controls. */
+.panel,.metric{color:#172435}
+.panel-title,.metric-value,.metric-top,.timeline-title,.detail-kv strong,.kv strong{color:#172435}
+.panel-note,.metric-foot,.form-help,.empty,.empty p,.proposal-meta,.timeline-desc,.detail-text,.kv span{color:#53657a}
+.panel .section-label,.panel label,.field label{color:#354a61}
+.panel th{color:#52657b;background:#f3f6fa}
+.panel td{color:#24384f}
+.panel .input,.panel .select,.panel .textarea,.role-table .input,.role-table .select{color:#172435;background:#fff}
+.panel .input::placeholder,.panel .textarea::placeholder,.role-table .input::placeholder{color:#68798d;opacity:1}
+.panel .empty h3{color:#24384f}
+.panel .footer-note,.content .footer-note{color:#53657a}
+.notice{color:#30465d}
+</style>
+</head>
+<body>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><img class="brand-mark" src="/pragati-logo.svg" alt="PRAGATI-AI Puducherry emblem"><div><div class="brand-name">PRAGATI-AI</div><div class="brand-sub">IPMPRS · Police Administration</div></div></div>
+    <div class="side-label">Workspace</div>
+    <nav class="nav" id="nav">
+      <button class="nav-btn active" data-action="nav" data-page="dashboard"><span class="ico" data-icon="grid"></span>Overview</button>
+      <button class="nav-btn" data-action="nav" data-page="proposals"><span class="ico" data-icon="file"></span>Proposal Register</button>
+      <button class="nav-btn" data-action="nav" data-page="precedents"><span class="ico" data-icon="search"></span>Precedent Finder</button>
+      <button class="nav-btn" data-action="nav" data-page="implementation"><span class="ico" data-icon="clipboard"></span>Implementation</button>
+      <button class="nav-btn" data-action="nav" data-page="audit"><span class="ico" data-icon="history"></span>Audit Trail</button>
+      <button class="nav-btn" data-action="nav" data-page="messages"><span class="ico" data-icon="activity"></span>Messages</button>
+      <button class="nav-btn" data-action="nav" data-page="users" id="usersNav" hidden><span class="ico" data-icon="users"></span>Users & Roles</button>
+    </nav>
+    <div class="side-label">System</div>
+    <div class="security-note"><strong>Workflow safeguards</strong>Sign-in required · Role-aware actions · Recorded decisions<br><br><span style="opacity:.8">Prototype environment. Do not upload confidential or operational police records.</span></div>
+    <div class="side-bottom" style="padding:14px 5px 2px"><button class="nav-btn" style="width:100%" data-action="signout"><span class="ico" data-icon="logout"></span>Sign out</button><div style="padding:12px 10px 0;color:#8198b1;font-size:10px">PRAGATI-AI · IPMPRS</div></div>
+  </aside>
+  <main class="main-wrap">
+    <!-- Emergency helplines are omitted because this application manages departmental proposals, not citizen complaints. -->
+    <section class="portal-banner" aria-label="PRAGATI-AI portal identity">
+      <div class="portal-crest"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3 40 12v13c0 10-7 16-16 20C15 41 8 35 8 25V12z" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15 23h18M18 30h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="17" r="4.5" fill="#d9232e"/><path d="M24 13v8M20 17h8" stroke="#fff" stroke-width="1.4"/></svg></div>
+      <div class="portal-identity"><div class="portal-eyebrow">PROPOSAL MANAGEMENT • INSTITUTIONAL KNOWLEDGE</div><h1>PRAGATI-AI <span>IPMPRS</span></h1><p>Intelligent Proposal Management &amp; Precedent Retrieval System</p></div>
+      <div class="portal-status"><span class="pulse"></span><span>PROPOSAL WORKSPACE</span><small>Independent prototype · not an official government service</small></div>
+    </section>
+    <header class="topbar">
+      <div class="top-left"><button class="menu-toggle" data-action="mobile-menu" aria-label="Open menu"><span data-icon="menu"></span></button><div><div class="breadcrumb">PRAGATI-AI / <span id="crumb">Overview</span></div><div class="top-title" id="topTitle">Proposal Overview</div></div></div>
+      <div class="top-right"><span class="prototype-pill">Prototype · Fictional data</span><div class="profile"><div class="avatar" id="avatar">P</div><div><div class="profile-name" id="profileName">Loading profile…</div><div class="profile-role" id="profileRole">Verifying session</div></div></div><button class="btn btn-light btn-sm top-signout" data-action="signout" aria-label="Sign out"><span data-icon="logout"></span><span class="signout-label">Sign out</span></button></div>
+    </header>
+    <div class="content" id="content"><div class="loading"><div class="spinner"></div><strong>Loading IPMPRS workspace…</strong></div></div>
+  </main>
+</div>
+<div class="toast-wrap" id="toastWrap"></div>
+<div id="modalRoot"></div>
+<script>
+(() => {
+const icons={
+grid:'<rect x="3" y="3" width="7" height="7" rx="1.4"/><rect x="14" y="3" width="7" height="7" rx="1.4"/><rect x="3" y="14" width="7" height="7" rx="1.4"/><rect x="14" y="14" width="7" height="7" rx="1.4"/>',
+file:'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/>',
+search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
+clipboard:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5M8 10h8M8 14h8M8 18h5"/>',
+history:'<path d="M3 12a9 9 0 1 0 2.6-6.4L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/>',
+users:'<path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+logout:'<path d="M10 17l5-5-5-5M15 12H3"/><path d="M12 3h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-6"/>',
+menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',
+plus:'<path d="M12 5v14M5 12h14"/>',
+arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',
+clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+check:'<path d="m5 12 4 4L19 6"/>',
+activity:'<path d="M3 12h4l3-8 4 16 3-8h4"/>',
+shield:'<path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/><path d="m9 12 2 2 4-4"/>',
+download:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/>',
+eye:'<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+close:'<path d="m18 6-12 12M6 6l12 12"/>',
+fileup:'<path d="M12 16V4m-5 5 5-5 5 5"/><path d="M4 16v4h16v-4"/>',
+filter:'<path d="M4 7h16M7 12h10m-7 5h4"/>',
+alert:'<path d="M10.3 3.9 2.5 17.4A2 2 0 0 0 4.2 20h15.6a2 2 0 0 0 1.7-2.6L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4m0 4h.01"/>'
+};
+function icon(name){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+(icons[name]||icons.file)+'</svg>'}
+document.querySelectorAll('[data-icon]').forEach(el=>el.innerHTML=icon(el.dataset.icon));
+const $=s=>document.querySelector(s);
+const state={page:'dashboard',user:null,metrics:{},proposals:[],events:[],users:[],search:'',status:'',precedentQuery:'',precedents:[],precedentInfo:'',modal:null,selected:null,detail:null,loading:false};
+const names={dashboard:'Proposal Overview',proposals:'Proposal Register',precedents:'Precedent Finder',implementation:'Implementation Tracking',audit:'Audit Trail',messages:'Station Messages',users:'User & Role Administration'};
+const statuses=['Draft','Submitted','Under Review','Recommended','Returned','Rejected','Approved','Implementing','Closed'];
+const roles=['Admin','Submitter','Reviewer','Approving Officer','Implementation Officer','SI','SHO / Inspector','ASI','Head Constable','Police Constable'];
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmtDate=v=>{if(!v)return '—';const d=new Date(v);return isNaN(d)?'—':d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'})};
+const fmtTime=v=>{if(!v)return '—';const d=new Date(v);return isNaN(d)?'—':d.toLocaleString('en-IN',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'})};
+const statusClass=s=>(s||'Draft').toLowerCase().replace(/[^a-z]+/g,'-');
+const statusBadge=s=>'<span class="status '+statusClass(s)+'">'+esc(s||'Draft')+'</span>';
+const isStaff=()=>['Admin','Reviewer','Approving Officer','Implementation Officer','SI','SHO / Inspector'].includes(state.user?.role);
+const canImplement=()=>['Admin','Implementation Officer','SI','SHO / Inspector'].includes(state.user?.role);
+function toast(title,message,type='ok'){const n=document.createElement('div');n.className='toast'+(type==='error'?' error':'');n.innerHTML='<strong>'+esc(title)+'</strong>'+esc(message);$('#toastWrap').appendChild(n);setTimeout(()=>n.remove(),4600)}
+async function api(url,opts={}){
+ const init={credentials:'same-origin',...opts,headers:{...(opts.headers||{})}};
+ if(opts.body && !(opts.body instanceof FormData) && typeof opts.body!=='string'){init.headers['Content-Type']='application/json';init.body=JSON.stringify(opts.body)}
+ let r;
+ try{r=await fetch(url,init)}catch(e){throw new Error('Could not reach the application service. Check your connection and retry.')}
+ if(r.status===401){location.href='/login?next='+encodeURIComponent(location.pathname+location.search);throw new Error('Please sign in to continue.')}
+ const ct=r.headers.get('content-type')||'';
+ let data={};if(ct.includes('application/json'))data=await r.json().catch(()=>({}));
+ if(!r.ok)throw new Error(data.error||('Request failed ('+r.status+').'));
+ if(!ct.includes('application/json'))return {ok:true};
+ return data;
+}
+function setHeader(){const u=state.user||{};$('#profileName').textContent=u.display_name||u.email||'User';$('#profileRole').textContent=u.role||'Submitter';$('#avatar').textContent=(u.display_name||u.email||'P').trim().charAt(0).toUpperCase();$('#usersNav').hidden=!['Admin','SI'].includes(u.role);$('#topTitle').textContent=names[state.page]||'Workspace';$('#crumb').textContent=names[state.page]||'Workspace';document.querySelectorAll('.nav-btn[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===state.page))}
+async function refreshData(){
+ const [s,p,a]=await Promise.all([api('/api/stats'),api('/api/proposals'+(state.search||state.status?'?'+new URLSearchParams({...(state.search?{q:state.search}:{}),...(state.status?{status:state.status}:{})}):'')),api('/api/audit')]);
+ state.metrics=s;state.proposals=p.proposals||[];state.events=a.events||[];
+}
+function pageHead(kicker,title,sub,action=''){return '<div class="page-head"><div><div class="eyebrow">'+kicker+'</div><h1 class="page-title">'+title+'</h1><div class="page-subtitle">'+sub+'</div></div>'+action+'</div>'}
+function metric(label,value,foot,ic,emphasis=''){return '<div class="metric"><div class="metric-top"><span>'+label+'</span><span class="metric-icon">'+icon(ic)+'</span></div><div class="metric-value">'+(value??0)+'</div><div class="metric-foot">'+foot+'</div></div>'}
+function proposalTable(list,compact=false){
+ if(!list.length)return '<div class="empty"><div class="empty-icon">'+icon('file')+'</div><h3>No proposals found</h3><p>Create a draft proposal or change your search filters. The sample records are fictional and read-only.</p><button class="btn btn-primary" data-action="new-proposal">'+icon('plus')+' New proposal</button></div>';
+ return '<div class="table-wrap"><table><thead><tr><th>Proposal / Department</th><th>Priority</th><th>Status</th><th>Updated</th><th></th></tr></thead><tbody>'+list.map(p=>'<tr><td><div class="proposal-title">'+esc(p.title)+(p.demo_data?'<span class="demo-tag">Demo</span>':'')+'</div><div class="proposal-meta">'+esc(p.department||p.category||'General')+' · '+esc(p.category||'General')+'</div></td><td><span class="priority '+esc(p.priority)+'"><span class="priority-dot" style="background:'+(p.priority==='Critical'?'#b42332':p.priority==='High'?'#c27418':p.priority==='Medium'?'#52708e':'#9aa6b3')+'"></span>'+esc(p.priority)+'</span></td><td>'+statusBadge(p.status)+'</td><td style="white-space:nowrap;color:#728195;font-size:11px">'+fmtDate(p.updated_at)+'</td><td><button class="btn btn-light btn-sm" data-action="open-proposal" data-id="'+esc(p.id)+'">'+icon('eye')+' Open</button></td></tr>').join('')+'</tbody></table></div>'
+}
+function eventList(events,compact=true){
+ if(!events.length)return '<div class="empty" style="padding:25px 10px"><div class="empty-icon">'+icon('history')+'</div><h3>No activity yet</h3><p>Workflow decisions and changes will appear here.</p></div>';
+ return '<div class="timeline">'+events.slice(0,compact?5:100).map(e=>'<div class="timeline-item"><div class="timeline-mark">'+icon(e.action?.toLowerCase().includes('approv')?'check':e.action?.toLowerCase().includes('document')?'fileup':'activity')+'</div><div><div class="timeline-title">'+esc(e.action||'Activity recorded')+'</div><div class="timeline-desc">'+esc(e.proposal_title||'Proposal')+(e.actor_email?' · '+esc(e.actor_email):'')+'</div>'+(e.reason?'<div class="timeline-desc">'+esc(e.reason)+'</div>':'')+'<div class="timeline-time">'+fmtTime(e.created_at)+'</div></div></div>').join('')+'</div>'
+}
+function dashboard(){
+ const m=state.metrics.metrics||{},statuses=state.metrics.statuses||[];
+ const total=m.total||0;
+ const action='<button class="btn btn-primary" data-action="new-proposal">'+icon('plus')+' Create proposal</button>';
+ const bars=statuses.map(s=>{const percent=total?Math.round(s.count/total*100):0;return '<div><div class="progress-line"><span>'+esc(s.status)+'</span><strong>'+s.count+' <span style="color:#8492a2;font-weight:500">· '+percent+'%</span></strong></div><div class="bar '+(s.status==='Closed'?'green':'')+'"><span style="width:'+percent+'%"></span></div></div>'}).join('');
+ return pageHead('PROPOSAL DASHBOARD','Proposal Overview','A consolidated view of proposal flow, review workload and implementation progress.',action)
+ +'<div class="notice info">'+icon('shield')+'<div><strong>Prototype workspace.</strong> All preloaded police proposals are fictional demo records. Sign-in and new proposal workflows use the application database. Do not upload real classified, personal or operational records.</div></div>'
+ +'<div class="grid metric-grid">'+metric('TOTAL PROPOSALS',m.total||0,'Visible in your current role','file')+metric('PENDING REVIEW',m.pending_review||0,'Submitted or under review','clock')+metric('APPROVED',m.approved||0,'Awaiting implementation start','check')+metric('HIGH-PRIORITY OPEN',m.high_priority||0,'High or critical priority','alert')+'</div>'
+ +'<div class="grid two-col"><section class="panel"><div class="panel-head"><div><div class="panel-title">Recent proposal activity</div><div class="panel-note">Prioritised register · select any item for the full workflow</div></div><button class="text-link" data-action="nav" data-page="proposals">View register →</button></div>'+proposalTable((state.metrics.recent||[]).slice(0,5),true)+'</section><div class="grid" style="gap:16px"><section class="panel"><div class="panel-head"><div><div class="panel-title">Workflow distribution</div><div class="panel-note">Current visible records by status</div></div></div><div class="panel-body"><div class="progress-list">'+(bars||'<div class="empty">No data yet</div>')+'</div></div></section><section class="panel"><div class="panel-head"><div><div class="panel-title">Latest audit events</div><div class="panel-note">Recorded system activity</div></div><button class="text-link" data-action="nav" data-page="audit">Full trail →</button></div><div class="panel-body">'+eventList(state.events,true)+'</div></section></div></div><div class="footer-note">PRAGATI-AI · IPMPRS · Decision support only; final administrative decisions remain with authorised officers.</div>'
+}
+function proposalsPage(){
+ const action='<button class="btn btn-primary" data-action="new-proposal">'+icon('plus')+' New proposal</button>';
+ return pageHead('RECORDS & WORKFLOW','Proposal Register','Create, review and track administrative proposals from draft through closure.',action)
+ +'<div class="panel"><div class="panel-head"><div><div class="panel-title">All visible proposals</div><div class="panel-note">Showing '+state.proposals.length+' records · sample records are marked DEMO</div></div></div><div class="panel-body" style="padding-bottom:0"><form class="toolbar" id="searchForm"><div class="searchbox">'+icon('search')+'<input class="input" id="proposalSearch" value="'+esc(state.search)+'" placeholder="Search title, summary, category or department…" aria-label="Search proposals"></div><select class="select" id="statusFilter" aria-label="Filter by status"><option value="">All statuses</option>'+statuses.map(s=>'<option '+(state.status===s?'selected':'')+'>'+s+'</option>').join('')+'</select><button class="btn btn-light" type="submit">'+icon('filter')+' Apply filters</button><button class="btn btn-light" type="button" data-action="clear-filters">Reset</button></form></div>'+proposalTable(state.proposals)+'</div><div class="footer-note">Role enforcement is performed by the API. Demo records are read-only; newly created records are editable through the workflow.</div>'
+}
+function precedentsPage(){
+ const action=state.user?.role==='Admin'?'<button class="btn btn-light" data-action="index-precedents">'+icon('activity')+' Index archive</button>':'';
+ return pageHead('KNOWLEDGE RETRIEVAL','Precedent Finder','Find related historical proposals by meaning, not just exact keywords, and inspect the original source records.',action)
+ +'<div class="notice info">'+icon('shield')+'<div><strong>Semantic retrieval configured:</strong> after an administrator adds the OpenAI API key and indexes the existing archive, proposals are ranked by embedding cosine similarity. Until setup is complete, searches use a clearly labelled keyword fallback. Similarity scores measure textual closeness, not factual correctness or approval suitability.</div></div>'
+ +'<section class="panel"><div class="panel-head"><div><div class="panel-title">Semantic precedent search</div><div class="panel-note">Embedding-based ranking · source-linked results · role-scoped access</div></div></div><div class="panel-body"><form class="toolbar" id="precedentForm"><div class="searchbox">'+icon('search')+'<input class="input" id="precedentInput" value="'+esc(state.precedentQuery)+'" placeholder="Try: ways to improve digital evidence handling…" aria-label="Search precedent proposals"></div><button class="btn btn-primary" type="submit">'+icon('search')+' Find precedents</button></form>'+(state.precedentInfo?'<div class="notice info" style="margin:0 0 14px">'+icon('activity')+'<div>'+esc(state.precedentInfo)+'</div></div>':'')+'<div id="precedentResults">'+(state.precedents.length?precedentResultsHtml(): '<div class="empty"><div class="empty-icon">'+icon('search')+'</div><h3>Search the proposal archive</h3><p>Use natural language or similar concepts. An administrator should index the archive once to embed existing proposals; new proposals are indexed automatically.</p></div>')+'</div></div></section>'
+}
+function precedentResultsHtml(){
+ if(!state.precedents.length)return '<div class="empty"><div class="empty-icon">'+icon('search')+'</div><h3>No matching precedents</h3><p>Try another phrasing or ask an administrator to index the archive.</p></div>';
+ return '<div class="grid" style="gap:10px">'+state.precedents.map((p,i)=>'<div style="border:1px solid var(--line);border-radius:9px;padding:15px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:start"><div><div style="display:flex;gap:7px;align-items:center;flex-wrap:wrap"><strong style="font-size:12px">'+esc(p.title)+'</strong>'+statusBadge(p.status)+'<span class="role-pill">Semantic similarity '+Number(p.similarity||0).toFixed(1)+'%</span>'+(p.demo_data?'<span class="demo-tag">Demo</span>':'')+'</div><p style="font-size:11px;color:#63748a;line-height:1.7;margin:8px 0">'+esc(p.summary)+'</p><div style="font-size:10px;color:#8793a1">'+esc(p.department)+' · '+esc(p.category)+' · Updated '+fmtDate(p.updated_at)+'</div><div style="font-size:10px;color:#456a8d;margin-top:6px">Ranked by '+esc(p.method||'semantic vector similarity')+'</div></div><button class="btn btn-light btn-sm" data-action="open-proposal" data-id="'+esc(p.id)+'">Source '+icon('arrow')+'</button></div>').join('')+'</div>'
+}
+function implementationPage(){
+ const list=state.proposals.filter(p=>['Approved','Implementing'].includes(p.status));
+ return pageHead('DELIVERY OVERSIGHT','Implementation Tracking','Track milestones, evidence, progress and administrative closure.')
+ +(!canImplement()?'<div class="notice info">'+icon('shield')+'<div>Read-only view for your current role. An Implementation Officer or Admin can add milestone updates.</div></div>':'')
+ +'<div class="panel"><div class="panel-head"><div><div class="panel-title">Approved proposals in implementation</div><div class="panel-note">'+list.length+' active or ready for implementation</div></div></div>'
+ +(list.length?'<div class="table-wrap"><table><thead><tr><th>Proposal</th><th>Status</th><th>Progress</th><th>Updated</th><th></th></tr></thead><tbody>'+list.map(p=>'<tr><td><div class="proposal-title">'+esc(p.title)+(p.demo_data?'<span class="demo-tag">Demo</span>':'')+'</div><div class="proposal-meta">'+esc(p.department)+'</div></td><td>'+statusBadge(p.status)+'</td><td style="min-width:120px"><div class="progress-line"><span>'+Number(p.progress||0)+'%</span></div><div class="bar green"><span style="width:'+Math.max(0,Math.min(100,Number(p.progress||0)))+'%"></span></div></td><td>'+fmtDate(p.updated_at)+'</td><td><button class="btn btn-light btn-sm" data-action="open-proposal" data-id="'+esc(p.id)+'">Update / view</button></td></tr>').join('')+'</tbody></table></div>':'<div class="empty"><div class="empty-icon">'+icon('clipboard')+'</div><h3>No active implementation</h3><p>Proposals appear here after they are approved. The seeded demo proposals are examples and cannot be modified.</p><button class="btn btn-light" data-action="nav" data-page="proposals">Open proposal register</button></div>')+'</div>'
+}
+function auditPage(){
+ return pageHead('ACCOUNTABILITY','Audit Trail','A time-ordered record of proposal changes, decisions, implementation updates and document activity.')
+ +'<div class="notice info">'+icon('shield')+'<div>Audit entries are written by backend workflow endpoints. The trail is useful for a prototype review but is not a certified government records system.</div></div>'
+ +'<section class="panel"><div class="panel-head"><div><div class="panel-title">Recorded activity</div><div class="panel-note">'+state.events.length+' recent entries</div></div><button class="btn btn-light btn-sm" data-action="refresh">'+icon('activity')+' Refresh</button></div><div class="panel-body">'+eventList(state.events,false)+'</div></section>'
+}
+async function loadUsers(){
+ const r=await api('/api/admin/users');state.users=r.users||[];state.stations=r.stations||[];state.pendingInvites=r.pending_invites||[];state.memberLimit=r.member_limit||50;state.activeMembers=r.active_members||0;
+}
+async function loadMessages(){state.messagesData=await api('/api/messages');}
+function messagesPage(){
+ const d=state.messagesData||{contacts:[],messages:[],pending:[]},isSI=['SI','Admin'].includes(state.user?.role);
+ const options='<option value="station_all">Everyone in my station — including the SI</option>'+d.contacts.map(c=>'<option value="'+esc(c.user_id)+'">'+esc((c.display_name||c.email)+' · '+c.role+' · '+c.station_code+(c.station_code===d.my_station?' (My station)':' (Other station — SI approval required)'))+'</option>').join('');
+ const pending=d.pending.map(m=>'<article class="draft-precedent-card"><strong>'+esc(m.sender_name||m.sender_email)+' · '+esc(m.sender_station_code)+' → '+esc(m.recipient_station_code)+'</strong><p>'+esc(m.message_text)+'</p><small>'+fmtTime(m.created_at)+' · To: '+esc(m.recipient_email)+'</small><div style="display:flex;gap:8px;margin-top:10px"><button class="btn btn-primary btn-sm" data-action="message-approval" data-id="'+esc(m.id)+'" data-decision="approve">Approve & deliver</button><button class="btn btn-danger btn-sm" data-action="message-approval" data-id="'+esc(m.id)+'" data-decision="reject">Reject</button></div></article>').join('');
+ const items=d.messages.map(m=>'<article class="draft-precedent-card"><div class="draft-precedent-title"><strong>'+esc(m.sender_name||m.sender_email)+' → '+esc(m.recipient_name||m.recipient_email)+'</strong><span class="status '+(m.status==='delivered'?'approved':m.status==='pending'?'under-review':'returned')+'">'+esc(m.status)+'</span></div><p style="white-space:pre-wrap">'+esc(m.message_text)+'</p><small>'+esc(m.sender_station_code)+' → '+esc(m.recipient_station_code)+' · '+fmtTime(m.created_at)+(m.status==='pending'?' · Awaiting receiving SI approval':'')+'</small></article>').join('');
+ return pageHead('STATION COMMUNICATION','Messages','Message officers within your station. Cross-station messages require the receiving station SI’s approval.')
+ +'<div class="notice info">'+icon('shield')+'<div>Station messages are limited to approved active accounts. Cross-station messages remain hidden from the recipient until their station SI approves them. Do not send confidential or operationally sensitive information in this prototype.</div></div>'
+ +'<section class="panel" style="margin-bottom:16px"><div class="panel-head"><div><div class="panel-title">Compose message</div><div class="panel-note">Same-station messages deliver immediately; other-station messages go to SI approval.</div></div></div><div class="panel-body"><form id="messageForm"><div class="form-grid"><div class="field span2"><label for="messageRecipient">Recipient *</label><select class="select" id="messageRecipient" required><option value="">Choose an approved officer</option>'+options+'</select></div><div class="field span2"><label for="messageText">Message *</label><textarea class="textarea" id="messageText" maxlength="2000" minlength="1" required placeholder="Write your message (maximum 2000 characters)"></textarea></div></div><div style="display:flex;justify-content:flex-end;margin-top:12px"><button class="btn btn-primary" type="submit">Send message</button></div></form></div></section>'
+ +(isSI?'<section class="panel" style="margin-bottom:16px"><div class="panel-head"><div><div class="panel-title">Cross-station approval queue</div><div class="panel-note">'+d.pending.length+' message request(s) awaiting your station’s decision</div></div><button class="btn btn-light btn-sm" data-action="refresh-messages">Refresh</button></div><div class="panel-body">'+(pending||'<div class="empty"><h3>No pending message requests</h3><p>Cross-station requests addressed to your station will appear here.</p></div>')+'</div></section>':'')
+ +'<section class="panel"><div class="panel-head"><div><div class="panel-title">Messages</div><div class="panel-note">Sent messages and messages delivered to you</div></div><button class="btn btn-light btn-sm" data-action="refresh-messages">Refresh</button></div><div class="panel-body">'+(items||'<div class="empty"><h3>No messages yet</h3><p>Your station conversations will appear here.</p></div>')+'</div></section>';
+}
+function usersPage(){
+ const stations=state.stations||[],isSI=state.user?.role==='SI',roleOptions=isSI?roles.filter(role=>['Submitter','Reviewer','Approving Officer','Implementation Officer','SHO / Inspector','ASI','Head Constable','Police Constable'].includes(role)):roles,stationDepartmentId=stations[0]?.department_id||state.user?.department_id||'';
+ return pageHead('STATION ACCESS','Station Members & Roles','Manage member profiles and contact details for your assigned station.')
+ +'<div class="notice warning">'+icon('shield')+'<div><strong>Station isolation:</strong> SIs can manage members of their currently assigned station only. Each station has a maximum of 50 active member profiles. Common reports from other stations remain read-only.</div></div>'
+ +'<div class="metric-grid"><div class="metric"><div class="metric-top">Active station members</div><div class="metric-value">'+Number(state.activeMembers||0)+' / '+Number(state.memberLimit||50)+'</div><div class="metric-foot">Active account cap for this station</div></div></div>'
+ +(isSI?'<section class="panel" style="margin-bottom:16px"><div class="panel-head"><div><div class="panel-title">Add a station member</div><div class="panel-note">Pre-approve an email before the member signs in. Their first login activates the assigned profile.</div></div></div><div class="panel-body"><div class="form-grid"><div class="field"><label for="newMemberEmail">Member email *</label><input class="input" id="newMemberEmail" type="email" placeholder="officer@example.com" required></div><div class="field"><label for="newMemberName">Member name</label><input class="input" id="newMemberName" placeholder="Full name"></div><div class="field"><label for="newMemberDept">Department ID *</label><input class="input" id="newMemberDept" value="'+esc(stationDepartmentId)+'" placeholder="Enter approved Department ID (e.g. SI1)" required></div><div class="field"><label for="newMemberRole">Role *</label><select class="select" id="newMemberRole">'+roleOptions.map(role=>'<option '+(role==='Police Constable'?'selected':'')+'>'+role+'</option>').join('')+'</select></div><div class="field"><label for="newMemberRank">Police rank</label><input class="input" id="newMemberRank" placeholder="e.g. Police Constable"></div><div class="field"><label for="newMemberPhone">Contact phone</label><input class="input" id="newMemberPhone" type="tel" placeholder="Contact number"></div><div class="field"><label for="newMemberExtension">Extension (optional)</label><input class="input" id="newMemberExtension" placeholder="Extension"></div></div><div style="display:flex;justify-content:flex-end;margin-top:15px"><button class="btn btn-primary" data-action="add-station-member">'+icon('user-plus')+' Add Member</button></div><div class="form-help">Maximum 50 active members per station. SI and Admin privileges cannot be assigned through this form.</div></div></section>':'')
+ +'<section class="panel"><div class="panel-head"><div><div class="panel-title">Registered members</div><div class="panel-note">'+state.users.length+' profiles · '+stations.length+' station(s) available to your role</div></div><button class="btn btn-light btn-sm" data-action="refresh-users">'+icon('activity')+' Refresh</button></div>'
+ +(state.users.length?'<div class="table-wrap"><table class="role-table"><thead><tr><th>Member / Email</th><th>Role</th><th>Station</th><th>Police rank</th><th>Contact phone</th><th>Extension</th><th>Active</th><th>Save</th></tr></thead><tbody>'+state.users.map(u=>'<tr><td><div class="proposal-title">'+esc(u.display_name||u.email)+'</div><div class="proposal-meta">'+esc(u.email)+'</div></td><td><select class="select" id="role-'+esc(u.user_id)+'" '+(u.user_id===state.user.user_id||isSI&&!roleOptions.includes(u.role)?'disabled':'')+'>'+roleOptions.map(role=>'<option '+(role===u.role?'selected':'')+'>'+role+'</option>').join('')+'</select></td><td><select class="select" id="station-'+esc(u.user_id)+'" '+(isSI?'disabled':'')+'><option value="">Unassigned</option>'+stations.map(s=>'<option value="'+esc(s.station_code)+'" '+(s.station_code===u.station_code?'selected':'')+'>'+esc(s.station_code+' · '+s.station_name)+'</option>').join('')+'</select></td><td><input class="input" id="rank-'+esc(u.user_id)+'" value="'+esc(u.police_rank||'')+'" placeholder="e.g. SI" '+(isSI&&u.user_id===state.user.user_id?'disabled':'')+'></td><td><input class="input" id="phone-'+esc(u.user_id)+'" value="'+esc(u.contact_phone||'')+'" placeholder="Contact number"></td><td><input class="input" id="ext-'+esc(u.user_id)+'" value="'+esc(u.contact_extension||'')+'" placeholder="Optional"></td><td><select class="select" id="active-'+esc(u.user_id)+'" '+(isSI&&u.user_id===state.user.user_id?'disabled':'')+'><option value="true" '+(u.active!==false?'selected':'')+'>Active</option><option value="false" '+(u.active===false?'selected':'')+'>Inactive</option></select></td><td><button class="btn btn-primary btn-sm" data-action="save-member" data-user="'+esc(u.user_id)+'">Save</button></td></tr>').join('')+'</tbody></table></div>':'<div class="empty"><h3>No registered members yet</h3><p>Pre-approved emails appear above while waiting for their first sign-in. Only emails approved by the Station SI can enter the workspace.</p></div>')+'</section>'+(isSI&&state.pendingInvites?.length?'<section class="panel" style="margin-top:16px"><div class="panel-head"><div><div class="panel-title">Approved emails awaiting first sign-in</div><div class="panel-note">These email addresses are saved and can activate their accounts on first login.</div></div></div><div class="table-wrap"><table class="role-table"><thead><tr><th>Email</th><th>Role</th><th>Department ID</th><th>Approved</th></tr></thead><tbody>'+state.pendingInvites.map(i=>'<tr><td>'+esc(i.email)+'</td><td>'+esc(i.role)+'</td><td>'+esc(i.department_id)+'</td><td>Awaiting sign-in</td></tr>').join('')+'</tbody></table></div></section>':'')+'<div class="footer-note">Member count includes active profiles and pending approvals. Department ID and station assignments are checked by the backend.</div>'
+}
+function render(){
+ setHeader();
+ const content=$('#content');
+ if(state.page==='dashboard')content.innerHTML=dashboard();
+ else if(state.page==='proposals')content.innerHTML=proposalsPage();
+ else if(state.page==='precedents')content.innerHTML=precedentsPage();
+ else if(state.page==='implementation')content.innerHTML=implementationPage();
+ else if(state.page==='audit')content.innerHTML=auditPage();
+ else if(state.page==='messages')content.innerHTML=messagesPage();
+ else if(state.page==='users')content.innerHTML=usersPage();
+ document.querySelectorAll('#content [data-action]').forEach(el=>{if(el.dataset.icon)el.innerHTML=icon(el.dataset.icon)});
+ if(state.modal==='create')$('#modalRoot').innerHTML=createModal();
+ else if(state.modal==='detail'&&state.detail)$('#modalRoot').innerHTML=detailModal();
+ else $('#modalRoot').innerHTML='';
+}
+function createModal(){
+ return '<div class="modal-backdrop" data-action="backdrop-close"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="createTitle"><div class="modal-head"><div><div class="eyebrow">New submission</div><h2 id="createTitle">Create proposal draft</h2><p>Complete the basic details. The proposal will remain a draft until submitted.</p></div><button class="close-btn" data-action="close-modal" aria-label="Close">'+icon('close')+'</button></div><form id="createForm"><div class="modal-body"><div class="form-grid"><div class="field span2"><label for="fTitle">Proposal title *</label><input class="input" id="fTitle" name="title" minlength="5" maxlength="180" required placeholder="e.g. District records digitisation pilot"></div><div class="field span2"><label for="fSummary">Proposal summary / rationale *</label><textarea class="textarea" id="fSummary" name="summary" minlength="12" maxlength="5000" required placeholder="Describe the need, proposed approach, intended outcomes and key constraints."></textarea></div><div class="field"><label for="fCategory">Category</label><select class="select" id="fCategory" name="category"><option>Technology</option><option>Infrastructure</option><option>Training</option><option>Equipment</option><option>Community Policing</option><option>Digital Transformation</option><option>Records Management</option><option>General</option></select></div><div class="field"><label for="fPriority">Priority</label><select class="select" id="fPriority" name="priority"><option>Medium</option><option>Low</option><option>High</option><option>Critical</option></select></div><div class="field"><label for="fDepartment">Department / unit</label><input class="input" id="fDepartment" name="department" maxlength="120" value="Police Administration"></div><div class="field"><label for="fDue">Target date</label><input class="input" id="fDue" name="due_date" type="date"></div><div class="field span2"><label><input type="checkbox" name="common_report" value="true"> Share as a read-only common report with other stations</label><p class="form-help">Only non-draft common reports are visible across stations; other stations cannot edit them.</p></div></div><div id="draftPrecedentResults" class="draft-precedent-results"><p class="form-help">Live precedent suggestions will appear here as you enter a proposal title and summary.</p></div><p class="form-help">Do not include real case details, sensitive personal information or classified operational information in this prototype.</p></div><div class="modal-foot"><button type="button" class="btn btn-light" data-action="close-modal">Cancel</button><button type="submit" class="btn btn-primary">'+icon('plus')+' Save draft</button></div></form></div></div>'
+}
+function availableActions(p){
+ if(p.demo_data)return [];
+ const role=state.user?.role,own=p.owner_id===state.user?.user_id,actions=[];
+ if(own&&['Draft','Returned'].includes(p.status))actions.push(['submit','Submit proposal','btn-primary']);
+ if(['Admin','Reviewer','SI'].includes(role)&&p.status==='Submitted')actions.push(['review','Begin review','btn-blue']);
+ if(['Admin','Reviewer','SI'].includes(role)&&p.status==='Under Review')actions.push(['recommend','Recommend','btn-blue']);
+ if(['Admin','Reviewer','Approving Officer','SI'].includes(role)&&['Submitted','Under Review','Recommended'].includes(p.status))actions.push(['return','Return to submitter','btn-danger']);
+ if(['Admin','Approving Officer','SI'].includes(role)&&p.status==='Recommended'){actions.push(['approve','Approve proposal','btn-primary']);actions.push(['reject','Reject proposal','btn-danger']);}
+ return actions;
+}
+function detailModal(){
+ const d=state.detail,p=d.proposal,actions=availableActions(p);
+ const docs=(d.documents||[]).map(doc=>'<div style="display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid #edf0f4"><div style="width:32px;height:32px;border-radius:7px;background:#edf4fc;color:#2463a6;display:grid;place-items:center">'+icon('file')+'</div><div style="flex:1;min-width:0"><div style="font-size:11px;font-weight:800;word-break:break-word">'+esc(doc.filename)+'</div><div style="font-size:10px;color:#8090a1">'+Math.max(1,Math.round((doc.size_bytes||0)/1024))+' KB · '+fmtDate(doc.created_at)+'</div></div><a class="btn btn-light btn-sm" href="/api/documents/'+encodeURIComponent(doc.id)+'">'+icon('download')+'</a></div>').join('');
+ const audit=(d.audit||[]).map(e=>'<div class="small-event"><strong>'+esc(e.action)+' · '+esc(e.actor_email)+'</strong><p>'+fmtTime(e.created_at)+(e.reason?' · '+esc(e.reason):'')+'</p></div>').join('');
+ const updates=(d.implementation||[]).map(e=>'<div class="small-event"><strong>'+esc(e.milestone)+' · '+e.progress+'%</strong><p>'+fmtTime(e.created_at)+(e.evidence?' · '+esc(e.evidence):'')+'</p></div>').join('');
+ const canUpload=!p.demo_data&&(p.owner_id===state.user.user_id||isStaff());
+ const userRole=state.user?.role||'Submitter';
+ const recordOptions=userRole==='Admin'?['Decision','Sanction','Observation','Modification','Outcome']:userRole==='Approving Officer'?['Decision','Sanction','Observation']:userRole==='Reviewer'?['Observation','Modification']:userRole==='Implementation Officer'?['Outcome','Observation']:[];
+ const recordCards=(d.decision_records||[]).map(r=>'<article class="decision-record"><div class="decision-record-top"><span class="record-type record-'+esc(String(r.record_type||'').toLowerCase())+'">'+esc(r.record_type)+'</span><strong>'+esc(r.title)+'</strong><small>'+fmtTime(r.created_at)+'</small></div><p>'+esc(r.details)+'</p><div class="record-meta">'+(r.reference_number?'<span>Ref: '+esc(r.reference_number)+'</span>':'')+(r.amount!=null?'<span>Sanction: '+esc(r.currency||'INR')+' '+Number(r.amount).toLocaleString('en-IN')+'</span>':'')+(r.effective_date?'<span>Effective: '+fmtDate(r.effective_date)+'</span>':'')+(r.actor_email?'<span>Recorded by: '+esc(r.actor_email)+'</span>':'')+'</div></article>').join('');
+ const recordForm=!p.demo_data&&recordOptions.length?'<form id="decisionRecordForm" class="record-form"><h4>Add a structured record</h4><div class="form-grid"><div class="field"><label for="recordType">Record type</label><select class="select" id="recordType" name="record_type">'+recordOptions.map(x=>'<option>'+x+'</option>').join('')+'</select></div><div class="field"><label for="recordReference">Reference / order number</label><input class="input" id="recordReference" name="reference_number" maxlength="100" placeholder="Optional reference"></div><div class="field span2"><label for="recordTitle">Title *</label><input class="input" id="recordTitle" name="title" required minlength="3" maxlength="240" placeholder="Short record title"></div><div class="field span2"><label for="recordDetails">Decision, conditions or outcome details *</label><textarea class="textarea" id="recordDetails" name="details" required minlength="3" maxlength="10000" placeholder="Enter the rationale, conditions, observations or outcome."></textarea></div><div class="field span2" id="sanctionFields" style="display:none"><div class="form-grid"><div class="field"><label for="recordAmount">Sanction amount (optional)</label><input class="input" id="recordAmount" name="amount" type="number" min="0.01" step="0.01" placeholder="0.00"></div><div class="field"><label for="recordCurrency">Currency</label><select class="select" id="recordCurrency" name="currency"><option>INR</option><option>USD</option><option>EUR</option></select></div><div class="field"><label for="recordEffectiveDate">Effective date (optional)</label><input class="input" id="recordEffectiveDate" name="effective_date" type="date"></div></div></div></div><button class="btn btn-primary btn-sm" type="submit">Save record</button></form>':'';
+ const recordSection='<div class="detail-section decision-records"><div class="section-label">Decisions, sanctions & outcomes</div>'+(recordCards||'<div class="form-help">No structured decision records yet. Approval actions and implementation milestones are recorded automatically.</div>')+recordForm+'</div>';
+ const impactData=d.impactBrief,impact=impactData?.impact_brief,aiAssessment=impact?.ai_assessment;
+ const impactMatches=(impactData?.matches||[]).slice(0,4).map(x=>'<article class="draft-precedent-card"><div class="draft-precedent-title"><strong>'+esc(x.reference||x.title)+' · '+esc(x.title)+'</strong>'+statusBadge(x.status)+'</div><p>'+esc(x.matched_excerpt||x.summary||'')+'</p><small>'+esc(x.department||'Unspecified department')+' · '+esc(x.decision||'Decision not recorded')+' · '+esc(x.method||impactData.method||'Keyword search')+'</small></article>').join('');
+ const impactSection='<div class="detail-section impact-brief"><div class="section-label">Precedent Impact & Risk Brief</div>'+(impact?'<div class="signal-pill '+(impact.signal_level==='Elevated review'?'elevated':impact.signal_level==='Review required'?'review':'neutral')+'">'+esc(impact.signal_level)+'</div><p class="detail-text">'+esc(impact.basis)+'</p>'+(aiAssessment?'<div class="impact-ai-assessment"><div class="section-label">NVIDIA Nemotron AI interpretation · human review required</div><p>'+esc(aiAssessment)+'</p><small>Generated from retrieved source records by '+esc(impact.ai_model||'NVIDIA Nemotron')+'. Verify every statement against the source proposal.</small></div>':(impact.ai_status==='not_configured'?'<p class="form-help">NVIDIA AI narrative is not configured yet. Add NVIDIA_API_KEY in the project secret settings to activate it.</p>':(impact.ai_status==='provider_error'?'<p class="form-help">NVIDIA AI narrative is currently unavailable. Structured and keyword-based checks remain available.</p>':'')))+'<div class="detail-kv"><div class="kv"><span>Records examined</span><strong>'+Number(impact.relevant_records_examined||0)+'</strong></div><div class="kv"><span>Adverse precedents</span><strong>'+(impact.adverse_precedents||[]).length+'</strong></div><div class="kv"><span>Successful precedents</span><strong>'+(impact.successful_precedents||[]).length+'</strong></div><div class="kv"><span>Departments</span><strong>'+(impact.departments_represented||[]).length+'</strong></div></div>'+(impact.conflicting_precedents?'<div class="notice warning" style="margin-top:10px">'+icon('alert')+'<div>Conflicting positive and adverse precedents were found. Compare their scope and conditions.</div></div>':'')+((impact.checks_before_decision||[]).length?'<div class="section-label" style="margin-top:13px">Checks before decision</div><ul>'+impact.checks_before_decision.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'')+((impact.sanctions||[]).length?'<div class="section-label" style="margin-top:13px">Prior sanctions found</div>'+impact.sanctions.slice(0,4).map(x=>'<div class="impact-source"><strong>'+esc(x.record_title||x.title)+'</strong><p>'+esc(x.reference_number||'No order reference')+(x.amount!=null?' · '+esc(x.currency||'INR')+' '+Number(x.amount).toLocaleString('en-IN'):'')+'</p><small>'+esc(x.details||'')+'</small></div>').join(''):'')+(impactMatches?'<div class="section-label" style="margin-top:13px">Similar historical proposals</div>'+impactMatches:'')+'<p class="form-help">'+esc(impact.disclaimer||'Decision support only; verify the source records.')+'</p>':'<div class="form-help">'+esc(d.impactError||'Loading historical precedent comparison…')+'</div>')+'</div>';
+ const canPublish=!p.demo_data&&['Admin','Approving Officer'].includes(userRole)&&['Approved','Rejected','Returned','Recommended','Implementing','Closed'].includes(p.status);
+ const publishBtn=canPublish?'<div class="precedent-publish-control"><span class="form-help">'+(p.precedent_visible?'Published to institutional precedents':'Not published to cross-department search')+'</span><button class="btn btn-light btn-sm" data-action="toggle-precedent" data-id="'+esc(p.id)+'" data-visible="'+(!p.precedent_visible)+'">'+(p.precedent_visible?'Remove from catalogue':'Publish as institutional precedent')+'</button></div>':'';
+ return '<div class="modal-backdrop" data-action="backdrop-close"><div class="modal wide" role="dialog" aria-modal="true" aria-labelledby="detailTitle"><div class="modal-head"><div><div class="eyebrow">Proposal record · '+esc(p.id.slice(0,12))+'</div><h2 id="detailTitle">'+esc(p.title)+'</h2><p>'+esc(p.department)+' · '+esc(p.category)+' '+(p.demo_data?'<span class="demo-tag">Fictional demo · read-only</span>':'')+'</p></div><button class="close-btn" data-action="close-modal" aria-label="Close">'+icon('close')+'</button></div><div class="modal-body"><div class="detail-grid"><div><div class="detail-section"><div style="display:flex;gap:9px;align-items:center;flex-wrap:wrap">'+statusBadge(p.status)+'<span class="priority '+esc(p.priority)+'">'+esc(p.priority)+' priority</span></div>'+publishBtn+'<div class="section-label" style="margin-top:17px">Proposal summary</div><div class="detail-text">'+esc(p.summary)+'</div></div><div class="detail-section"><div class="section-label">Record details</div><div class="detail-kv"><div class="kv"><span>Submitted by</span><strong>'+esc(p.owner_email)+'</strong></div><div class="kv"><span>Created</span><strong>'+fmtDate(p.created_at)+'</strong></div><div class="kv"><span>Target date</span><strong>'+fmtDate(p.due_date)+'</strong></div><div class="kv"><span>Implementation progress</span><strong>'+Number(p.progress||0)+'%</strong></div></div></div><div class="detail-section"><div class="section-label">Supporting documents</div>'+(docs||'<div class="form-help" style="padding:4px 0 12px">No documents attached.</div>')+(canUpload?'<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:11px"><input type="file" id="docFile" accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.txt,.png,.jpg,.jpeg" hidden><button class="btn btn-light btn-sm" data-action="choose-file">'+icon('fileup')+' Attach document</button><span class="form-help">PDF, Office, CSV, TXT or image · max 10 MB</span></div>':'')+'</div>'+recordSection+impactSection+'<div class="detail-section"><div class="section-label">Implementation evidence</div>'+(updates||'<div class="form-help">No milestones recorded.</div>')+(canImplement()&&!p.demo_data&&['Approved','Implementing'].includes(p.status)?'<form id="implementationForm" style="margin-top:14px;background:#f7f9fc;border:1px solid #e4eaf1;border-radius:9px;padding:13px"><div class="section-label">Add milestone update</div><div class="form-grid"><div class="field span2"><label for="milestone">Milestone *</label><input id="milestone" name="milestone" class="input" required placeholder="e.g. Procurement completed"></div><div class="field"><label for="progress">Progress (%) *</label><input id="progress" name="progress" class="input" type="number" min="0" max="100" value="'+Number(p.progress||0)+'" required></div><div class="field"><label for="evidence">Evidence / notes</label><input id="evidence" name="evidence" class="input" placeholder="Evidence reference or status"></div></div><button class="btn btn-primary btn-sm" type="submit" style="margin-top:12px">Save milestone</button></form>':'')+'</div></div><div><div class="detail-section"><div class="section-label">Workflow actions</div>'+(p.demo_data?'<div class="notice warning">'+icon('alert')+'<div>Fictional sample record. Read-only demonstration of workflow status.</div></div>':actions.length?'<div style="display:flex;gap:8px;flex-wrap:wrap">'+actions.map(a=>'<button class="btn '+a[2]+' btn-sm" data-action="workflow" data-workflow="'+a[0]+'" data-id="'+esc(p.id)+'">'+esc(a[1])+'</button>').join('')+'</div>':'<div class="form-help">No action is available for your role at this status.</div>')+'</div>'+(actions.length?'<div class="field" style="margin:14px 0 21px"><label for="workflowReason">Decision note (optional)</label><textarea id="workflowReason" class="textarea" style="min-height:65px" placeholder="Add a reason to the audit trail…"></textarea></div>':'')+'<div class="detail-section"><div class="section-label">Audit history</div>'+(audit?'<div class="small-timeline">'+audit+'</div>':'<div class="form-help">No audit events for this record yet.</div>')+'</div></div></div></div><div class="modal-foot"><button class="btn btn-light" data-action="close-modal">Close</button></div></div></div>'
+}
+async function openProposal(id){
+ state.modal='detail';state.detail=null;render();
+ $('#modalRoot').innerHTML='<div class="modal-backdrop"><div class="modal"><div class="loading"><div class="spinner"></div><strong>Loading proposal record…</strong></div></div></div>';
+ try{state.detail=await api('/api/proposals/'+encodeURIComponent(id));try{state.detail.impactBrief=await api('/api/proposals/'+encodeURIComponent(id)+'/impact-brief')}catch(riskError){state.detail.impactError='Precedent brief unavailable: '+riskError.message}render()}catch(e){state.modal=null;render();toast('Unable to open proposal',e.message,'error')}
+}
+async function changePage(page){
+ if(page==='users'&&!['Admin','SI'].includes(state.user?.role)){toast('Restricted','Administrator or assigned SI access is required.','error');return}
+ state.page=page;closeMobile();
+ try{if(page==='users')await loadUsers();if(page==='messages')await loadMessages();if(page==='dashboard'||page==='proposals'||page==='implementation'||page==='audit')await refreshData();render()}catch(e){$('#content').innerHTML='<div class="notice warning">'+icon('alert')+'<div><strong>Unable to load this view.</strong> '+esc(e.message)+'<br><button class="btn btn-light btn-sm" style="margin-top:9px" data-action="refresh">Retry</button></div></div>';toast('Load failed',e.message,'error')}
+}
+function closeMobile(){$('#sidebar').classList.remove('open');$('#mobileOverlay').classList.remove('show')}
+async function boot(){
+ try{const s=await api('/api/session');state.user=s.user;await refreshData();render()}
+ catch(e){if(!location.pathname.startsWith('/login')){$('#content').innerHTML='<div class="empty" style="padding:80px 20px"><div class="empty-icon">'+icon('shield')+'</div><h3>Sign in to the IPMPRS workspace</h3><p>'+esc(e.message)+'</p><a class="btn btn-primary" href="/login?next=/">Continue to sign in</a></div>'}}
+}
+document.addEventListener('click',async ev=>{
+ const el=ev.target.closest('[data-action]');if(!el)return;
+ const a=el.dataset.action;
+ if(a==='nav'){ev.preventDefault();changePage(el.dataset.page);return}
+ if(a==='mobile-menu'){$('#sidebar').classList.toggle('open');$('#mobileOverlay').classList.toggle('show');return}
+ if(a==='close-modal'){state.modal=null;state.detail=null;render();return}
+ if(a==='backdrop-close'&&ev.target===el){state.modal=null;state.detail=null;render();return}
+ if(a==='new-proposal'){state.modal='create';render();return}
+ if(a==='clear-filters'){state.search='';state.status='';changePage('proposals');return}
+ if(a==='refresh'){try{await refreshData();render();toast('Updated','Workspace data refreshed.')}catch(e){toast('Refresh failed',e.message,'error')}return}
+ if(a==='index-precedents'){
+  const old=el.innerHTML;el.disabled=true;el.textContent='Indexing archive…';
+  try{const indexed=await api('/api/precedents/index',{method:'POST',body:{}});state.precedentInfo=indexed.message+' Indexed '+indexed.indexed+' proposals.';
+   toast('Semantic index ready',indexed.indexed+' proposals embedded for vector search.');
+   if(state.precedentQuery){const data=await api('/api/precedents?q='+encodeURIComponent(state.precedentQuery));state.precedents=data.results||[];state.precedentInfo=data.message||data.search_mode}
+   render();
+  }catch(e){toast('Indexing failed',e.message,'error');el.disabled=false;el.innerHTML=old}
+  return
+ }
+ if(a==='add-station-member'){
+   const email=$('#newMemberEmail')?.value.trim(),display_name=$('#newMemberName')?.value.trim()||'',role=$('#newMemberRole')?.value||'Police Constable',department_id=$('#newMemberDept')?.value.trim()||'',police_rank=$('#newMemberRank')?.value.trim()||role,contact_phone=$('#newMemberPhone')?.value.trim()||'',contact_extension=$('#newMemberExtension')?.value.trim()||'';
+   if(!email||!email.includes('@')){toast('Email required','Enter a valid member email address.','error');return}
+   el.disabled=true;el.textContent='Adding…';
+   try{const result=await api('/api/admin/users',{method:'POST',body:{email,display_name,role,department_id,police_rank,contact_phone,contact_extension}});await loadUsers();render();toast('Member added',result.message||'Member assigned to your station.')}
+   catch(e){toast('Could not add member',e.message,'error');el.disabled=false;el.innerHTML=icon('user-plus')+' Add Member'}return
+  }
+  if(a==='save-member'){
+   const id=el.dataset.user,role=$('#role-'+CSS.escape(id))?.value,station_code=$('#station-'+CSS.escape(id))?.value||null,police_rank=$('#rank-'+CSS.escape(id))?.value||'',contact_phone=$('#phone-'+CSS.escape(id))?.value||'',contact_extension=$('#ext-'+CSS.escape(id))?.value||'',active=$('#active-'+CSS.escape(id))?.value==='true';
+   el.disabled=true;el.textContent='Saving…';
+   try{await api('/api/admin/users',{method:'PATCH',body:{user_id:id,role,station_code,police_rank,contact_phone,contact_extension,active}});await loadUsers();render();toast('Member updated','Role, station assignment, active status and contact details saved.')}
+   catch(e){toast('Save failed',e.message,'error');el.disabled=false;el.textContent='Save'}return
+  }
+  if(a==='refresh-users'){try{await loadUsers();render();toast('Updated','User list refreshed.')}catch(e){toast('Refresh failed',e.message,'error')}return}
+ if(a==='refresh-messages'){try{await loadMessages();render();toast('Updated','Messages refreshed.')}catch(e){toast('Refresh failed',e.message,'error')}return}
+ if(a==='message-approval'){el.disabled=true;try{const r=await api('/api/messages',{method:'PATCH',body:{message_id:el.dataset.id,action:el.dataset.decision}});await loadMessages();render();toast('Message decision saved',r.notice||'Updated.')}catch(e){toast('Could not update message',e.message,'error');el.disabled=false}return}
+ if(a==='open-proposal'){openProposal(el.dataset.id);return}
+ if(a==='choose-file'){$('#docFile')?.click();return}
+ if(a==='workflow'){
+  const id=el.dataset.id,action=el.dataset.workflow,reason=$('#workflowReason')?.value||'';
+  el.disabled=true;el.textContent='Saving…';
+  try{const r=await api('/api/proposals/'+encodeURIComponent(id)+'/action',{method:'POST',body:{action,reason}});toast('Workflow updated','Status changed to '+r.status+'.');state.detail=await api('/api/proposals/'+encodeURIComponent(id));await refreshData();render()}
+  catch(e){toast('Action not completed',e.message,'error');if(state.detail)render()}return
+ }
+ if(a==='toggle-precedent'){
+  const id=el.dataset.id,visible=el.dataset.visible==='true';el.disabled=true;
+  try{const result=await api('/api/proposals/'+encodeURIComponent(id)+'/precedent-visibility',{method:'POST',body:{visible}});state.detail=await api('/api/proposals/'+encodeURIComponent(id));await refreshData();render();toast('Precedent catalogue updated',result.precedent_visible?'This proposal is now available to authorised cross-department precedent searches.':'This proposal has been removed from the institutional catalogue.')}
+  catch(e){toast('Publication update failed',e.message,'error');el.disabled=false}
+  return
+ }
+ if(a==='signout'){try{await window.hatchable.auth.signOut()}catch(e){}location.href='/login';return}
+});
+$('#mobileOverlay').addEventListener('click',closeMobile);
+let draftPreviewTimer=null;
+document.addEventListener('input',ev=>{
+ if(state.modal!=='create'||!['fTitle','fSummary','fCategory','fPriority'].includes(ev.target.id))return;
+ if(draftPreviewTimer)clearTimeout(draftPreviewTimer);
+ const title=$('#fTitle')?.value.trim()||'',summary=$('#fSummary')?.value.trim()||'',target=$('#draftPrecedentResults');
+ if(!target)return;
+ if(title.length<5||summary.length<12){target.innerHTML='<p class="form-help">Enter a title and summary to search historical precedents.</p>';return}
+ target.innerHTML='<p class="form-help">Checking previous decisions, sanctions and outcomes…</p>';
+ draftPreviewTimer=setTimeout(async()=>{
+  try{
+   const query=[title,summary,$('#fCategory')?.value||'',$('#fPriority')?.value||''].join(' ');
+   const data=await api('/api/precedents?q='+encodeURIComponent(query));
+   const panel=$('#draftPrecedentResults');if(!panel||state.modal!=='create')return;
+   const results=(data.results||[]).slice(0,4);
+   panel.innerHTML='<div class="section-label">Related historical precedents</div><p class="form-help">'+esc(data.message||data.search_mode||'Search results')+'</p>'+(results.length?results.map(p=>'<article class="draft-precedent-card"><div class="draft-precedent-title"><strong>'+esc(p.title||'Untitled proposal')+'</strong>'+statusBadge(p.status)+'</div><p>'+esc(String(p.summary||p.matched_excerpt||'').slice(0,220))+'</p><small>'+esc(p.department||'Unspecified department')+' · '+esc(p.decision||'Decision not recorded')+' · '+esc(p.method||data.search_mode||'Keyword search')+'</small>'+(p.decision_records?.length?'<div class="form-help">'+p.decision_records.slice(0,2).map(r=>esc(r.record_type+': '+r.title+' — '+r.details)).join(' · ')+'</div>':'')+'</article>').join(''):'<p class="form-help">No matching historical records were found. Continue drafting, and check again before submission.</p>');
+  }catch(e){const panel=$('#draftPrecedentResults');if(panel)panel.innerHTML='<p class="form-help">Live precedent search is currently unavailable. You can still save the draft and use Precedent Finder later.</p>'}
+ },700);
+});
+document.addEventListener('change',ev=>{
+ if(ev.target.id==='recordType'){const fields=$('#sanctionFields');if(fields)fields.style.display=ev.target.value==='Sanction'?'block':'none'}
+});
+document.addEventListener('submit',async ev=>{
+ if(ev.target.id==='messageForm'){
+  ev.preventDefault();const recipient_id=$('#messageRecipient')?.value,message_text=$('#messageText')?.value.trim()||'';const btn=ev.target.querySelector('[type=submit]');if(!recipient_id||!message_text){toast('Message required','Choose a recipient and enter a message.','error');return}btn.disabled=true;btn.textContent='Sending…';
+  try{const result=await api('/api/messages',{method:'POST',body:{recipient_id,message_text}});await loadMessages();render();toast('Message saved',result.notice||'Message sent.')}catch(e){toast('Message not sent',e.message,'error');btn.disabled=false;btn.textContent='Send message'}return
+ }
+ if(ev.target.id==='createForm'){
+  ev.preventDefault();const f=new FormData(ev.target),body=Object.fromEntries(f.entries());const btn=ev.target.querySelector('[type=submit]');btn.disabled=true;btn.textContent='Saving…';
+  try{await api('/api/proposals',{method:'POST',body});state.modal=null;state.search='';state.status='';await refreshData();state.page='proposals';render();toast('Draft saved','Your proposal was saved successfully.')}
+  catch(e){toast('Could not save proposal',e.message,'error');btn.disabled=false;btn.innerHTML=icon('plus')+' Save draft'}return
+ }
+ if(ev.target.id==='searchForm'){
+  ev.preventDefault();state.search=$('#proposalSearch').value.trim();state.status=$('#statusFilter').value;
+  try{await refreshData();render()}catch(e){toast('Search failed',e.message,'error')}return
+ }
+ if(ev.target.id==='precedentForm'){
+  ev.preventDefault();state.precedentQuery=$('#precedentInput').value.trim();
+  if(state.precedentQuery.length<2){toast('Enter a longer query','Use at least two characters.','error');return}
+  const btn=ev.target.querySelector('[type=submit]');btn.disabled=true;btn.textContent='Searching…';
+  try{const data=await api('/api/precedents?q='+encodeURIComponent(state.precedentQuery));state.precedents=data.results||[];state.precedentInfo=data.message||data.search_mode||'';render();}catch(e){toast('Search failed',e.message,'error');btn.disabled=false;btn.innerHTML=icon('search')+' Find precedents'}return
+ }
+ if(ev.target.id==='decisionRecordForm'){
+  ev.preventDefault();const f=new FormData(ev.target),body=Object.fromEntries(f.entries());const kind=String(body.record_type||'');body.amount=kind==='Sanction'&&body.amount?Number(body.amount):null;body.effective_date=body.effective_date||null;if(kind!=='Sanction'){body.amount=null;body.effective_date=null}const id=state.detail.proposal.id;const btn=ev.target.querySelector('[type=submit]');btn.disabled=true;btn.textContent='Saving record…';
+  try{const result=await api('/api/proposals/'+encodeURIComponent(id)+'/decision-records',{method:'POST',body});state.detail=await api('/api/proposals/'+encodeURIComponent(id));await refreshData();render();toast('Record saved',kind+' history was added and is available for precedent retrieval.')}
+  catch(e){toast('Record not saved',e.message,'error');btn.disabled=false;btn.textContent='Save record'}return
+ }
+ if(ev.target.id==='implementationForm'){
+  ev.preventDefault();const f=new FormData(ev.target),body=Object.fromEntries(f.entries());body.progress=Number(body.progress);const id=state.detail.proposal.id;const btn=ev.target.querySelector('[type=submit]');btn.disabled=true;btn.textContent='Saving…';
+  try{const r=await api('/api/proposals/'+encodeURIComponent(id)+'/implementation',{method:'POST',body});toast('Milestone recorded','Progress is now '+r.progress+'%. Status: '+r.status+'.');state.detail=await api('/api/proposals/'+encodeURIComponent(id));await refreshData();render()}catch(e){toast('Update failed',e.message,'error');btn.disabled=false;btn.textContent='Save milestone'}return
+ }
+});
+document.addEventListener('change',async ev=>{
+ if(ev.target.id==='docFile'){
+  const input=ev.target,file=input.files?.[0];if(!file||!state.detail)return;
+  const id=state.detail.proposal.id;const form=new FormData();form.append('file',file);
+  try{toast('Uploading document','Uploading '+file.name+'…');await api('/api/proposals/'+encodeURIComponent(id)+'/documents',{method:'POST',body:form});state.detail=await api('/api/proposals/'+encodeURIComponent(id));await refreshData();render();toast('Document attached','The document was uploaded and recorded in the audit trail.')}
+  catch(e){toast('Upload failed',e.message,'error')}
+  return
+ }
+ if(ev.target.matches('[data-role-user]')){
+  const user_id=ev.target.dataset.roleUser,role=ev.target.value,old=state.users.find(u=>u.user_id===user_id)?.role;
+  ev.target.disabled=true;try{const r=await api('/api/admin/users',{method:'PATCH',body:{user_id,role}});state.users=state.users.map(u=>u.user_id===user_id?r.user:u);render();toast('Role updated','Role changed to '+role+'.')}catch(e){toast('Role change failed',e.message,'error');ev.target.value=old;ev.target.disabled=false}
+ }
+});
+boot();
+})();
+</script>
+</body></html>

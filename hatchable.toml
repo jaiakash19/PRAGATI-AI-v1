@@ -1,0 +1,21 @@
+name = "PRAGATI-AI — IPMPRS"
+description = "Police proposal management, precedent retrieval, approval workflows, implementation tracking and auditability."
+
+[auth]
+enabled = true
+providers = ["email"]
+
+[ai]
+required = false
+providers = ["openai"]
+description = "PRAGATI-AI calls NVIDIA NIM directly for proposal embeddings and evidence-grounded impact assessments."
+
+[[secret]]
+name = "NVIDIA_API_KEY"
+required = true
+description = "NVIDIA API key from build.nvidia.com, used by Nemotron embeddings and the AI impact assessment endpoint."
+
+[[config]]
+name = "nvidia_chat_model"
+default = "nvidia/nemotron-3-super-120b-a12b"
+description = "NVIDIA chat model used to generate the evidence-grounded impact assessment."

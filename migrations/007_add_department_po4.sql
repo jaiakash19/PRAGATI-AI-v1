@@ -1,0 +1,1 @@
+INSERT INTO allowed_department_ids (department_id, active) VALUES ('PO4', TRUE) ON CONFLICT (department_id) DO UPDATE SET active = TRUE;

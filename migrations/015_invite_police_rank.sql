@@ -1,0 +1,1 @@
+ALTER TABLE station_member_invites ADD COLUMN IF NOT EXISTS police_rank TEXT;
